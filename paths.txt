@@ -1,0 +1,2 @@
+for intelliJ to Find: C:\Users\jonah.sebright\Documents\EFI
+in normal school folder: \\FAP01-GKG\User_Data$\Schueler_Home\jonah.sebright\Documents\EFI\Eigene_Projekte
