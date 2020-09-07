@@ -48,20 +48,20 @@ public class ZeitRechnerTest {
                 18 + 3 * 60 //18min
                         + 4 * 60 * 60 //4h
                         + 17 * 60 * 60 * 24 //17d
-                        + 8 * 60 * 60 * 24 * 30 //8m
-                        + 7 * 60 * 60 * 24 * 30 * 12 //7years
+                        + 7 * 60 * 60 * 24 * 365 //7years
+                        + 3 * 60 * 60 * 24 * 365 * 10//3 decades
+
         ));
         ArrayList<BigInteger> popped = zeitRechner.popAll();
         assertEquals(ZeitRechner.TIME.UNITS_DESCENDING_ORDER.length, popped.size());
         assertEquals(0, popped.get(0).intValueExact());
         assertEquals(0, popped.get(1).intValueExact());
-        assertEquals(0, popped.get(2).intValueExact());
+        assertEquals(3, popped.get(2).intValueExact());
         assertEquals(7, popped.get(3).intValueExact());
-        assertEquals(8, popped.get(4).intValueExact());
-        assertEquals(17, popped.get(5).intValueExact());
-        assertEquals(4, popped.get(6).intValueExact());
-        assertEquals(3, popped.get(7).intValueExact());
-        assertEquals(18, popped.get(8).intValueExact());
+        assertEquals(17, popped.get(4).intValueExact());
+        assertEquals(4, popped.get(5).intValueExact());
+        assertEquals(3, popped.get(6).intValueExact());
+        assertEquals(18, popped.get(7).intValueExact());
     }
 
 }

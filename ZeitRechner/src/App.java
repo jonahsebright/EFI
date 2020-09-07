@@ -16,7 +16,6 @@ public class App {
     private JCheckBox jahrhunderteCheckBox;
     private JCheckBox jahrzehnteCheckBox;
     private JCheckBox jahreCheckBox;
-    private JCheckBox monateCheckBox;
     private JCheckBox tageCheckBox;
     private JCheckBox stundenCheckBox;
     private JCheckBox minutenCheckBox;
@@ -25,7 +24,6 @@ public class App {
     private JLabel resJH;
     private JLabel resJZ;
     private JLabel resJ;
-    private JLabel resMon;
     private JLabel resT;
     private JLabel resStu;
     private JLabel resMin;
@@ -39,7 +37,6 @@ public class App {
                 new UnitSelectionItem(jahrhunderteCheckBox, resJH, ZeitRechner.TIME.YEAR_100),
                 new UnitSelectionItem(jahrzehnteCheckBox, resJZ, ZeitRechner.TIME.YEAR_10),
                 new UnitSelectionItem(jahreCheckBox, resJ, ZeitRechner.TIME.YEAR),
-                new UnitSelectionItem(monateCheckBox, resMon, ZeitRechner.TIME.MONTH),
                 new UnitSelectionItem(tageCheckBox, resT, ZeitRechner.TIME.DAY),
                 new UnitSelectionItem(stundenCheckBox, resStu, ZeitRechner.TIME.HOUR),
                 new UnitSelectionItem(minutenCheckBox, resMin, ZeitRechner.TIME.MINUTE),

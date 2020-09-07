@@ -10,15 +10,13 @@ public class ZeitRechner {
         public static final BigInteger SECONDS_IN_MINUTE = SIXTY;
         public static final BigInteger MINUTES_IN_HOUR = SIXTY;
         public static final BigInteger HOURS_IN_DAY = BigInteger.valueOf(24);
-        public static final BigInteger DAYS_IN_MONTH = BigInteger.valueOf(30);
-        public static final BigInteger MONTHS_IN_YEAR = BigInteger.valueOf(12);
+        public static final BigInteger DAYS_IN_YEAR = BigInteger.valueOf(365);
 
         public static final BigInteger SECOND = BigInteger.ONE;
         public static final BigInteger MINUTE = SECOND.multiply(SECONDS_IN_MINUTE);
         public static final BigInteger HOUR = MINUTE.multiply(MINUTES_IN_HOUR);
         public static final BigInteger DAY = HOUR.multiply(HOURS_IN_DAY);
-        public static final BigInteger MONTH = DAY.multiply(DAYS_IN_MONTH);
-        public static final BigInteger YEAR = MONTH.multiply(MONTHS_IN_YEAR);
+        public static final BigInteger YEAR =DAY.multiply(DAYS_IN_YEAR);
         public static final BigInteger YEAR_10 = YEAR.multiply(BigInteger.TEN);
         public static final BigInteger YEAR_100 = YEAR_10.multiply(BigInteger.TEN);
         public static final BigInteger YEAR_1000 = YEAR_100.multiply(BigInteger.TEN);
@@ -28,7 +26,6 @@ public class ZeitRechner {
                 YEAR_100,
                 YEAR_10,
                 YEAR,
-                MONTH,
                 DAY,
                 HOUR,
                 MINUTE,
