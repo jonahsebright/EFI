@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="40adba8b-d3e2-45ec-b0f3-78c7b35b9b8c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1hJhNQnxwWhn74fKxbCkbnWTVqD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.LastDigitsTest">
+    <configuration name="LastDigitsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LastDigits" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LastDigitsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LastDigitsTest.calculate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LastDigits" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LastDigitsTest" />
+      <option name="METHOD_NAME" value="calculate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.LastDigitsTest" />
+        <item itemvalue="JUnit.LastDigitsTest.calculate" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="40adba8b-d3e2-45ec-b0f3-78c7b35b9b8c" name="Default Changelist" comment="" />
+      <created>1599735064460</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599735064460</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="645" y="220" key="#com.intellij.ide.util.MemberChooser" timestamp="1599736286946">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="645" y="220" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010@0.0.1680.1010" timestamp="1599736286946" />
+    <state x="620" y="259" key="FileChooserDialogImpl" timestamp="1599735409024">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="620" y="259" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1599735409024" />
+    <state width="1637" height="256" key="GridCell.Tab.0.bottom" timestamp="1599736852375">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="256" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1599736852375" />
+    <state width="1637" height="256" key="GridCell.Tab.0.center" timestamp="1599736852375">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="256" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1599736852375" />
+    <state width="1637" height="256" key="GridCell.Tab.0.left" timestamp="1599736852375">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="256" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1599736852375" />
+    <state width="1637" height="256" key="GridCell.Tab.0.right" timestamp="1599736852375">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="256" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1599736852375" />
+    <state width="1637" height="336" key="GridCell.Tab.1.bottom" timestamp="1599736800324">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.1.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1599736800324" />
+    <state width="1637" height="336" key="GridCell.Tab.1.center" timestamp="1599736800324">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.1.center/0.0.1680.1010@0.0.1680.1010" timestamp="1599736800324" />
+    <state width="1637" height="336" key="GridCell.Tab.1.left" timestamp="1599736800309">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.1.left/0.0.1680.1010@0.0.1680.1010" timestamp="1599736800309" />
+    <state width="1637" height="336" key="GridCell.Tab.1.right" timestamp="1599736800324">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.1.right/0.0.1680.1010@0.0.1680.1010" timestamp="1599736800324" />
+    <state x="544" y="396" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1599735094974">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="544" y="396" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1680.1010@0.0.1680.1010" timestamp="1599735094974" />
+    <state x="611" y="318" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1599735090039">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="611" y="318" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1599735090039" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/LastDigits$LastDigitsTest_calculate.ic" NAME="LastDigitsTest.calculate Coverage Results" MODIFIED="1599735517097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

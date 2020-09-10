@@ -13,7 +13,7 @@ class DigitsOfNumbersTest {
 
     @Test
     public void test() {
-        digitsOfNumbers = new DigitsOfNumbers(3869, 4);
+        digitsOfNumbers = new DigitsOfNumbers(3869L, 4);
         assertEquals(4, digitsOfNumbers.getDigits().size());
 
         assertEquals(3, digitsOfNumbers.getDigits().get(0));
@@ -25,13 +25,20 @@ class DigitsOfNumbersTest {
 
     @Test
     public void calcCrossSum() {
-        digitsOfNumbers = new DigitsOfNumbers(39289, 5);
+        digitsOfNumbers = new DigitsOfNumbers(39289L, 5);
         assertEquals(3 + 9 + 2 + 8 + 9, digitsOfNumbers.getCrossSum());
     }
 
     @Test
     public void displayDigits() {
-        digitsOfNumbers = new DigitsOfNumbers(39289,5);
+        digitsOfNumbers = new DigitsOfNumbers(39289L,5);
         assertEquals("Digits of 39289: 3, 9, 2, 8, 9" , digitsOfNumbers.displayDigits());
     }
+
+    @Test
+    public void lastDigitOf() {
+        assertEquals(9 , DigitsOfNumbers.lastDigitOf(6234329));
+        assertEquals(3 , DigitsOfNumbers.lastDigitOf(62343));
+    }
+
 }
