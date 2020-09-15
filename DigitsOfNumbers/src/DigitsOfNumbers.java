@@ -4,8 +4,6 @@ public class DigitsOfNumbers {
 
     private long number;
 
-    private String numberStr;
-
     private ArrayList<Integer> digits;
 
     public DigitsOfNumbers(Long number) {
@@ -14,7 +12,6 @@ public class DigitsOfNumbers {
 
     public DigitsOfNumbers(Long number, int numDigits) {
         this.number = number;
-        numberStr = String.valueOf(number);
 
         digits = new ArrayList<>();
 
@@ -22,6 +19,12 @@ public class DigitsOfNumbers {
             int digitPlace = (int) Math.pow(10, (place - 1)); //power of 10
             this.digits.add(getNumPowerOfTens(digitPlace));
         }
+
+        resetNumberToOriginal(number);
+    }
+
+    private void resetNumberToOriginal(Long number) {
+        this.number = number;
     }
 
     private int getNumPowerOfTens(int powerOfTen) {
@@ -51,7 +54,7 @@ public class DigitsOfNumbers {
 
     public String displayDigits() {
         StringBuilder result = new StringBuilder(
-                "Digits of " + numberStr + ": " + digits.get(0));
+                "Digits of " + number + ": " + digits.get(0));
         for (int i = 1; i < digits.size(); i++) {
             result.append(", ").append(digits.get(i));
         }

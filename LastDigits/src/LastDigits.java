@@ -1,4 +1,5 @@
-import javax.print.attribute.standard.NumberOfDocuments;
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.ArrayList;
 
 public class LastDigits {
@@ -21,30 +22,67 @@ public class LastDigits {
         return l;
     }
 
-    public int calculate(int numDigits) {
+    public static boolean isEven(long num) {
+        return isDivisibleBy(num, 2);
+    }
+
+    public static boolean isDivisibleBy(long num, int divisor) {
+        return num % divisor == 0;
+    }
+
+    public ArrayList<Integer> calculate(int numDigits) {
         long originalBase = base;
         long originalPow = pow;
 
         int baseLastDigit = DigitsOfNumbers.lastDigitOf(base);
         int cycleLength = cycleLengthOfDigit(baseLastDigit);
 
-        if (numDigits > 1) return 81;
+        reducePowAsMuchAsPossible(originalBase, cycleLength);
+
+        DigitsOfNumbers digitsOfNumbers = initNewDigitsOfNumbers();
+        int numDigitsCalculated = digitsOfNumbers.getDigits().size();
+        while (notEnoughDigitsCalculated(numDigitsCalculated, numDigits)) {
+            multiplyPowByCycleLength(cycleLength);
+            digitsOfNumbers = new DigitsOfNumbers((long) Math.pow(base, pow));
+            numDigitsCalculated = digitsOfNumbers.getDigits().size();
+        }
 
         resetOriginalBaseAndPower(originalBase, originalPow);
-        return 1;
-
-
+        return digitsOfNumbers.getLast(numDigits);
     }
 
-    private int cycleLengthOfDigit(int digit) {
+    private DigitsOfNumbers initNewDigitsOfNumbers() {
+        BigInteger baseBig = BigInteger.valueOf(base);
+        return new DigitsOfNumbers(baseBig.pow((int) pow));
+    }
+
+    private void multiplyPowByCycleLength(int cycleLength) {
+        pow *= cycleLength;
+    }
+
+    private boolean notEnoughDigitsCalculated(int numDigitsCalculated, int numDigitsToCalculate) {
+        return numDigitsCalculated < numDigitsToCalculate;
+    }
+
+    public void reducePowAsMuchAsPossible(long originalBase, int cycleLength) {
+        while (pow > cycleLength) {
+            if (isDivisibleBy(pow, cycleLength)) {
+                pow /= cycleLength;
+            } else {
+                base *= originalBase;
+                pow--;
+            }
+        }
+    }
+
+    public int cycleLengthOfDigit(int digit) {
         if (digit == 1) return 1;
         int length = 0;
         int currentLast = -1;
-        int power_n = digit;
+        int multiplied = digit;
         while (currentLast != digit) {
-            power_n = (int) Math.pow(digit, digit);
-            DigitsOfNumbers digitsOfPowerN = new DigitsOfNumbers((long) power_n);
-            currentLast = digitsOfPowerN.getLast();
+            multiplied = multiplied * digit;
+            currentLast = DigitsOfNumbers.lastDigitOf(multiplied);
             length++;
         }
         return length;

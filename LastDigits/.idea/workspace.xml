@@ -19,7 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40adba8b-d3e2-45ec-b0f3-78c7b35b9b8c" name="Default Changelist" comment="" />
+    <list default="true" id="40adba8b-d3e2-45ec-b0f3-78c7b35b9b8c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../DigitsOfNumbers/src/DigitsOfNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DigitsOfNumbers/src/DigitsOfNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LastDigits.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LastDigits.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LastDigits/LastDigits$OperationTooLongException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LastDigits/LastDigits$OperationTooLongException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LastDigits/LastDigits.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LastDigits/LastDigits.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LastDigits/LastDigitsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LastDigits/LastDigitsTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DigitsOfNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DigitsOfNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LastDigits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LastDigits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LastDigitsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LastDigitsTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +61,8 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
+    <property name="extract.method.default.visibility" value="public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DigitsOfNumbers" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -63,7 +75,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LastDigitsTest">
+  <component name="RunManager" selected="JUnit.LastDigitsTest.calculate">
     <configuration name="LastDigitsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LastDigits" />
       <option name="PACKAGE_NAME" value="" />
@@ -83,10 +95,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LastDigitsTest.calculatesCorrectCycleLength" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LastDigits" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LastDigitsTest" />
+      <option name="METHOD_NAME" value="calculatesCorrectCycleLength" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LastDigitsTest.isDivisibleBy" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LastDigits" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LastDigitsTest" />
+      <option name="METHOD_NAME" value="isDivisibleBy" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LastDigitsTest" />
         <item itemvalue="JUnit.LastDigitsTest.calculate" />
+        <item itemvalue="JUnit.LastDigitsTest" />
+        <item itemvalue="JUnit.LastDigitsTest.isDivisibleBy" />
+        <item itemvalue="JUnit.LastDigitsTest.calculatesCorrectCycleLength" />
       </list>
     </recent_temporary>
   </component>
@@ -118,50 +152,88 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="645" y="220" key="#com.intellij.ide.util.MemberChooser/0.0.1680.1010@0.0.1680.1010" timestamp="1599736286946" />
-    <state x="620" y="259" key="FileChooserDialogImpl" timestamp="1599735409024">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="468" height="438" key="DebuggerActiveHint" timestamp="1600092809852">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="468" height="438" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1600092809852" />
+    <state x="472" y="174" key="FileChooserDialogImpl" timestamp="1600091596610">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="472" y="174" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1600091596610" />
     <state x="620" y="259" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1599735409024" />
-    <state width="1637" height="256" key="GridCell.Tab.0.bottom" timestamp="1599736852375">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="1237" height="204" key="GridCell.Tab.0.bottom" timestamp="1600092887907">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="204" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600092887907" />
     <state width="1637" height="256" key="GridCell.Tab.0.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1599736852375" />
-    <state width="1637" height="256" key="GridCell.Tab.0.center" timestamp="1599736852375">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="1237" height="204" key="GridCell.Tab.0.center" timestamp="1600092887907">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="204" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1600092887907" />
     <state width="1637" height="256" key="GridCell.Tab.0.center/0.0.1680.1010@0.0.1680.1010" timestamp="1599736852375" />
-    <state width="1637" height="256" key="GridCell.Tab.0.left" timestamp="1599736852375">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="1237" height="204" key="GridCell.Tab.0.left" timestamp="1600092887907">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="204" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1600092887907" />
     <state width="1637" height="256" key="GridCell.Tab.0.left/0.0.1680.1010@0.0.1680.1010" timestamp="1599736852375" />
-    <state width="1637" height="256" key="GridCell.Tab.0.right" timestamp="1599736852375">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="1237" height="204" key="GridCell.Tab.0.right" timestamp="1600092887907">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="204" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1600092887907" />
     <state width="1637" height="256" key="GridCell.Tab.0.right/0.0.1680.1010@0.0.1680.1010" timestamp="1599736852375" />
-    <state width="1637" height="336" key="GridCell.Tab.1.bottom" timestamp="1599736800324">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1600092887907">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1600092887907" />
     <state width="1637" height="336" key="GridCell.Tab.1.bottom/0.0.1680.1010@0.0.1680.1010" timestamp="1599736800324" />
-    <state width="1637" height="336" key="GridCell.Tab.1.center" timestamp="1599736800324">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="1237" height="204" key="GridCell.Tab.1.center" timestamp="1600092887907">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1600092887907" />
     <state width="1637" height="336" key="GridCell.Tab.1.center/0.0.1680.1010@0.0.1680.1010" timestamp="1599736800324" />
-    <state width="1637" height="336" key="GridCell.Tab.1.left" timestamp="1599736800309">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="1237" height="204" key="GridCell.Tab.1.left" timestamp="1600092887907">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1600092887907" />
     <state width="1637" height="336" key="GridCell.Tab.1.left/0.0.1680.1010@0.0.1680.1010" timestamp="1599736800309" />
-    <state width="1637" height="336" key="GridCell.Tab.1.right" timestamp="1599736800324">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state width="1237" height="204" key="GridCell.Tab.1.right" timestamp="1600092887907">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1600092887907" />
     <state width="1637" height="336" key="GridCell.Tab.1.right/0.0.1680.1010@0.0.1680.1010" timestamp="1599736800324" />
-    <state x="544" y="396" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1599735094974">
-      <screen x="0" y="0" width="1680" height="1010" />
+    <state x="414" y="267" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1600086892507">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="414" y="267" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1600086892507" />
     <state x="544" y="396" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1680.1010@0.0.1680.1010" timestamp="1599735094974" />
     <state x="611" y="318" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1599735090039">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="611" y="318" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1680.1010@0.0.1680.1010" timestamp="1599735090039" />
+    <state x="371" y="113" key="extract.method.dialog" timestamp="1600090783256">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="113" key="extract.method.dialog/0.0.1280.680@0.0.1280.680" timestamp="1600090783256" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1600179117149">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1600179117149" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LastDigitsTest.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/LastDigits.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/LastDigits$LastDigitsTest_calculate.ic" NAME="LastDigitsTest.calculate Coverage Results" MODIFIED="1599735517097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
