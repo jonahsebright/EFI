@@ -19,16 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40adba8b-d3e2-45ec-b0f3-78c7b35b9b8c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../DigitsOfNumbers/src/DigitsOfNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DigitsOfNumbers/src/DigitsOfNumbers.java" afterDir="false" />
+    <list default="true" id="40adba8b-d3e2-45ec-b0f3-78c7b35b9b8c" name="Default Changelist" comment="worked on Digits projects">
+      <change afterPath="$PROJECT_DIR$/../QuadratZahlen/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QuadratZahlen/.idea/libraries/flanagan.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QuadratZahlen/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QuadratZahlen/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QuadratZahlen/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QuadratZahlen/QuadratZahlen.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QuadratZahlen/src/QuadratZahlen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../QuadratZahlen/src/QuadratZahlenTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LastDigits.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LastDigits.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LastDigits/LastDigits$OperationTooLongException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LastDigits/LastDigits$OperationTooLongException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LastDigits/LastDigits.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LastDigits/LastDigits.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/LastDigits/LastDigitsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LastDigits/LastDigitsTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DigitsOfNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DigitsOfNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LastDigits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LastDigits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LastDigitsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LastDigitsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +133,14 @@
       <option name="presentableId" value="Default" />
       <updated>1599735064460</updated>
     </task>
+    <task id="LOCAL-00001" summary="worked on Digits projects">
+      <created>1600179441698</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600179441698</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -147,6 +155,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="worked on Digits projects" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked on Digits projects" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="645" y="220" key="#com.intellij.ide.util.MemberChooser" timestamp="1599736286946">
       <screen x="0" y="0" width="1680" height="1010" />
@@ -156,10 +168,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="468" height="438" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1600092809852" />
-    <state x="472" y="174" key="FileChooserDialogImpl" timestamp="1600091596610">
+    <state x="472" y="163" key="FileChooserDialogImpl" timestamp="1600335807072">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="472" y="174" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1600091596610" />
+    <state x="472" y="163" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1600335807072" />
     <state x="620" y="259" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1599735409024" />
     <state width="1237" height="204" key="GridCell.Tab.0.bottom" timestamp="1600092887907">
       <screen x="0" y="0" width="1280" height="680" />
@@ -214,10 +226,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="113" key="extract.method.dialog/0.0.1280.680@0.0.1280.680" timestamp="1600090783256" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1600179117149">
+    <state x="91" y="0" key="new project wizard" timestamp="1600335810355">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1600179117149" />
+    <state x="91" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1600335810355" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1600335707737">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1600335707737" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
