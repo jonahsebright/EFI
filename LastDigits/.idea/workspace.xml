@@ -19,7 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40adba8b-d3e2-45ec-b0f3-78c7b35b9b8c" name="Default Changelist" comment="worked on Digits projects" />
+    <list default="true" id="40adba8b-d3e2-45ec-b0f3-78c7b35b9b8c" name="Default Changelist" comment="worked on Digits projects">
+      <change afterPath="$PROJECT_DIR$/../Konvertierung/.idea/libraries/flanagan.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Konvertierung/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Konvertierung/src/DualZuDecimal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Konvertierung/src/DualZuDecimalTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Konvertierung/Konvertierung.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Konvertierung/Konvertierung.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
