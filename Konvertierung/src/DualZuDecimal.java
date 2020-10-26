@@ -10,7 +10,6 @@ public class DualZuDecimal {
     private static void readDualInput() {
         String dual_str = String.valueOf(Db.readLine("Geben sie eine Binärzahl ein", "110010101001"));
         try {
-            //TODO: remove line int dual = Integer.parseInt(dual_str);
             checkOnlyContainsZerosAndOnes(dual_str);
             BigInteger decimal = convertToDecimal(dual_str);
             Db.show("Die binäre Zahl wurde erfolgreich in eine Decimalzahl umgewandelt:\n",
