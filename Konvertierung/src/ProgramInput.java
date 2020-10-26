@@ -2,7 +2,7 @@ import flanagan.io.Db;
 
 import java.math.BigInteger;
 
-public class DualZuDecimal {
+public class ProgramInput {
     public static void main(String[] args) {
         readDualInput();
     }
@@ -10,9 +10,8 @@ public class DualZuDecimal {
     private static void readDualInput() {
         String dual_str = String.valueOf(Db.readLine("Geben sie eine Binärzahl ein", "110010101001"));
         try {
-            //TODO: remove line int dual = Integer.parseInt(dual_str);
             checkOnlyContainsZerosAndOnes(dual_str);
-            BigInteger decimal = convertToDecimal(dual_str);
+            String decimal = new LowerBaseBaseToDecimal().convert(dual_str, 2);
             Db.show("Die binäre Zahl wurde erfolgreich in eine Decimalzahl umgewandelt:\n",
                     dual_str + "_2 = " + decimal + "_10");
         } catch (NumberFormatException e) {
@@ -20,22 +19,7 @@ public class DualZuDecimal {
             readDualInput();
         } catch (NoBinaryNumberException noBinaryNumberException) {
             Db.show("Die eingebene Zahl (" + dual_str + ") wahr keine Binärzahl!");
-
         }
-    }
-
-    public static BigInteger convertToDecimal(String dual_str) {
-        String[] digits = dual_str.split("");
-        int numDigits = digits.length;
-        BigInteger decimalResult = BigInteger.ZERO;
-        for (int i = digits.length - 1; i >= 0; i--) {
-            String digit = digits[i];
-            int digitVal = Integer.parseInt(digit);
-            BigInteger digitBig = BigInteger.valueOf(digitVal);
-            BigInteger pow_2 = BigInteger.valueOf(2).pow(numDigits - i - 1);
-            decimalResult = decimalResult.add(pow_2.multiply(digitBig));
-        }
-        return decimalResult;
     }
 
     public static class NoBinaryNumberException extends RuntimeException {
