@@ -3,16 +3,16 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class LowerBaseToDecimalTest {
+class OtherBaseToDecimalTest {
 
-    private LowerBaseBaseToDecimalConverter converter = new LowerBaseBaseToDecimalConverter();
+    private OtherBaseToDecimalConverter converter = new OtherBaseToDecimalConverter();
 
     @BeforeEach
     void setUp() {
     }
 
     @Test
-    public void lowerToHigherBase() {
+    public void dualToDecimal() {
 
         assertEquals("1", converter.convert("1", 2));
         assertEquals("2", converter.convert("10", 2));
@@ -27,5 +27,11 @@ class LowerBaseToDecimalTest {
         assertEquals("12345678", converter.convert("12345678", 10));
 
         //Strings.binaryToHexadecimal("01");
+    }
+
+    @Test
+    void hexadecimalToDecimal(){
+        assertEquals("1", converter.convert("1", 16));
+        assertEquals("15", converter.convert("F", 16));
     }
 }

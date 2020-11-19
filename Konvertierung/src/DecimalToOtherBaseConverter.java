@@ -1,4 +1,4 @@
-public class DecimalToOtherBaseConverter implements LowerBaseToHigherBaseConverter {
+public class DecimalToOtherBaseConverter implements BaseConverter {
     public static String[] HEXADECIMAL_EXTRA_CHARS = {"A", "B", "C", "D", "E", "F"};
 
     @Override
