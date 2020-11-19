@@ -6,34 +6,29 @@ public class ProgramInput {
     }
 
     private static void readDualInput() {
-        String dual_str = String.valueOf(Db.readLine("Geben sie eine Binärzahl ein", "110010101001"));
+        String inOriginalBase = Db.readLine("Geben sie eine Zahl in irgendeiner Basis ein", "110010101001");
+        int basisOriginal = Db.readInt("In welcher Basis ist diese Zahl?");
+        int basisNeu = Db.readInt("Zu welcher Basis möchten Sie die Zahl konvertieren?");
+
+        BaseConverter baseConverter = BaseConverterFactory.create(basisOriginal, basisNeu);
+        String converted = baseConverter.convert(inOriginalBase);
+
+        Db.show("Die originale Zahl wurde erfolgreich in eine neue Basis umgewandelt:\n",
+                inOriginalBase + "_" + basisOriginal +
+                        " = " + converted + "_" + basisNeu);
+        /*
         try {
-            checkOnlyContainsZerosAndOnes(dual_str);
+            StringUtils.checkOnlyContainsZerosAndOnes(dual_str);
             String decimal = new OtherBaseToDecimalConverter().convert(dual_str, 2);
             Db.show("Die binäre Zahl wurde erfolgreich in eine Decimalzahl umgewandelt:\n",
                     dual_str + "_2 = " + decimal + "_10");
         } catch (NumberFormatException e) {
             Db.show("Die eingebene Zahl (" + dual_str + ") wahr keine Zahl!");
             readDualInput();
-        } catch (NoBinaryNumberException noBinaryNumberException) {
+        } catch (StringUtils.NoBinaryNumberException noBinaryNumberException) {
             Db.show("Die eingebene Zahl (" + dual_str + ") wahr keine Binärzahl!");
         }
-    }
 
-    public static class NoBinaryNumberException extends RuntimeException {
-        @Override
-        public String getMessage() {
-            return "Input was no binary number";
-        }
-    }
-
-    public static void checkOnlyContainsZerosAndOnes(String dual_str) {
-        if (!containsOnlyZerosAndOnes(dual_str)) {
-            throw new NoBinaryNumberException();
-        }
-    }
-
-    public static boolean containsOnlyZerosAndOnes(String dual_str) {
-        return dual_str.matches("^[01]+$");
+         */
     }
 }

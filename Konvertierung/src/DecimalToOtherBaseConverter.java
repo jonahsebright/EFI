@@ -1,12 +1,17 @@
 public class DecimalToOtherBaseConverter implements BaseConverter {
     public static String[] HEXADECIMAL_EXTRA_CHARS = {"A", "B", "C", "D", "E", "F"};
+    private int otherBase;
+
+    public DecimalToOtherBaseConverter(int otherBase) {
+        this.otherBase = otherBase;
+    }
 
     @Override
-    public String convert(String inDecimal, int otherBase) {
+    public String convert(String inDecimal) {
         int remainder = Integer.parseInt(inDecimal);
         String result = "";
-        int maxHigherBaseMagnitude = calculateHigherBaseMagnitude(remainder, otherBase);
-        for (int magnitude = maxHigherBaseMagnitude; magnitude > 0; magnitude--) {
+        int maxOtherBaseMagnitude = calculateHigherBaseMagnitude(remainder, otherBase);
+        for (int magnitude = maxOtherBaseMagnitude; magnitude > 0; magnitude--) {
             int magVal = (int) Math.pow(otherBase, magnitude);
             int numberTimesFitsIn = remainder / magVal;
             result = addValueToResult(result, numberTimesFitsIn);
