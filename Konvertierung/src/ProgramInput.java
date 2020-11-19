@@ -1,7 +1,5 @@
 import flanagan.io.Db;
 
-import java.math.BigInteger;
-
 public class ProgramInput {
     public static void main(String[] args) {
         readDualInput();
@@ -11,7 +9,7 @@ public class ProgramInput {
         String dual_str = String.valueOf(Db.readLine("Geben sie eine Binärzahl ein", "110010101001"));
         try {
             checkOnlyContainsZerosAndOnes(dual_str);
-            String decimal = new LowerBaseBaseToDecimal().convert(dual_str, 2);
+            String decimal = new LowerBaseBaseToDecimalConverter().convert(dual_str, 2);
             Db.show("Die binäre Zahl wurde erfolgreich in eine Decimalzahl umgewandelt:\n",
                     dual_str + "_2 = " + decimal + "_10");
         } catch (NumberFormatException e) {

@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LowerBaseToDecimalTest {
 
-    private LowerBaseBaseToDecimal converter = new LowerBaseBaseToDecimal();
+    private LowerBaseBaseToDecimalConverter converter = new LowerBaseBaseToDecimalConverter();
 
     @BeforeEach
     void setUp() {

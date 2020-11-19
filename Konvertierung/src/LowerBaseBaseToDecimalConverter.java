@@ -1,7 +1,7 @@
 import java.math.BigInteger;
 import java.util.ArrayList;
 
-public class LowerBaseBaseToDecimal implements LowerBaseToHigherBase {
+public class LowerBaseBaseToDecimalConverter implements LowerBaseToHigherBaseConverter {
     @Override
     public String convert(String inLowerBase, int lowerBase) {
         DigitsOfNumbers<String> digitsOfNumbers = new StringDigitsOfNumbers(inLowerBase);
