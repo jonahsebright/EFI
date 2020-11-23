@@ -1,3 +1,5 @@
+import java.math.BigInteger;
+
 public class DecimalToOtherBaseConverter implements BaseConverter {
     public static String[] HEXADECIMAL_EXTRA_CHARS = {"A", "B", "C", "D", "E", "F"};
     private int otherBase;
@@ -8,29 +10,37 @@ public class DecimalToOtherBaseConverter implements BaseConverter {
 
     @Override
     public String convert(String inDecimal) {
-        int remainder = Integer.parseInt(inDecimal);
+        BigInteger remainder = new BigInteger(inDecimal);
         String result = "";
         int maxOtherBaseMagnitude = calculateHigherBaseMagnitude(remainder, otherBase);
         for (int magnitude = maxOtherBaseMagnitude; magnitude > 0; magnitude--) {
-            int magVal = (int) Math.pow(otherBase, magnitude);
-            int numberTimesFitsIn = remainder / magVal;
+            BigInteger magVal = BigInteger.valueOf((long) Math.pow(otherBase, magnitude));
+            BigInteger numberTimesFitsIn = remainder.divide(magVal);
             result = addValueToResult(result, numberTimesFitsIn);
-            remainder -= magVal * numberTimesFitsIn;
+            remainder = remainder.subtract(magVal.multiply(numberTimesFitsIn));
         }
         result = addValueToResult(result, remainder);
         return result;
     }
 
-    public static int calculateHigherBaseMagnitude(int decimal, int higherBase) {
+    public static int calculateHigherBaseMagnitude(BigInteger decimal, int higherBase) {
         int mag = 0;
-        while (decimal >= Math.pow(higherBase, mag + 1)) {
+        while (decimal.compareTo(getHigherBaseToPowerMag(higherBase, mag)) >= 0) {
             mag++;
         }
         return mag;
     }
 
-    private String addValueToResult(String result, int valueDecimal) {
-        int diff = valueDecimal - 9;
+    private static BigInteger getHigherBaseToPowerMag(int higherBase, int mag) {
+        return BigInteger.valueOf(higherBase).pow(mag + 1);
+    }
+
+    public static int calculateHigherBaseMagnitude(int decimal, int higherBase) {
+        return calculateHigherBaseMagnitude(BigInteger.valueOf(decimal), higherBase);
+    }
+
+    private String addValueToResult(String result, BigInteger valueDecimal) {
+        int diff = valueDecimal.intValue() - 9;
         if (diff <= 0)
             result += valueDecimal;
         else
