@@ -2,7 +2,7 @@ import java.math.BigInteger;
 
 public class DecimalToOtherBaseConverter implements BaseConverter {
     public static String[] HEXADECIMAL_EXTRA_CHARS = {"A", "B", "C", "D", "E", "F"};
-    private int otherBase;
+    protected int otherBase;
 
     public DecimalToOtherBaseConverter(int otherBase) {
         this.otherBase = otherBase;

@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Arrays;
 
@@ -8,5 +9,10 @@ public class BaseConversionUtils {
         int digitInt = Arrays.binarySearch(HEXADECIMAL_CHARS, digit);
         return BigInteger.valueOf(digitInt)
                 .multiply(BigInteger.valueOf(base).pow(magnitude));
+    }
+
+    static BigDecimal calculateDigitBehindPointVal(String digit, double magnitude, int base) {
+        int digitInt = Arrays.binarySearch(HEXADECIMAL_CHARS, digit);
+        return BigDecimal.valueOf(digitInt*Math.pow(base, magnitude));
     }
 }
