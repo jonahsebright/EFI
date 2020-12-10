@@ -1,3 +1,5 @@
+package main;
+
 public class OtherBaseToOtherBase_BaseConverter implements BaseConverter {
     private int originalBase;
     private int newBase;
