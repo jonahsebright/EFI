@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="842508ff-274a-448a-83e0-e21e85e7d41f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KonvertierungFliessKommazahlBasisXZuDecimal/KonvertierungFliessKommazahlBasisXZuDecimal.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KonvertierungFliessKommazahlBasisXZuDecimal/src/main/BaseConversionUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KonvertierungFliessKommazahlBasisXZuDecimal/src/main/BaseConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KonvertierungFliessKommazahlBasisXZuDecimal/src/main/DigitsOfNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KonvertierungFliessKommazahlBasisXZuDecimal/src/main/FloatingPointStringDigitsOfNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KonvertierungFliessKommazahlBasisXZuDecimal/src/main/OtherBaseToDecimalFloatingPointConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KonvertierungFliessKommazahlBasisXZuDecimal/src/main/ProgramInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KonvertierungFliessKommazahlBasisXZuDecimal/src/main/StringDigitsOfNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KonvertierungFliessKommazahlBasisXZuDecimal/src/main/StringUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KonvertierungFliessKommazahlBasisXZuDecimal/src/test/BaseConversionUtilsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KonvertierungFliessKommazahlBasisXZuDecimal/src/test/OtherBaseToDecimalFloatingPointConverterTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KonvertierungFliessKommazahlBasisXZuDecimal/src/test/StringUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Konvertierung/out/production/Konvertierung/main/DecimalToOtherBaseFloatingPointConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Konvertierung/out/production/Konvertierung/main/DecimalToOtherBaseFloatingPointConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Konvertierung/src/StringUtilsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Konvertierung/src/main/DecimalToOtherBaseFloatingPointConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Konvertierung/src/main/DecimalToOtherBaseFloatingPointConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Konvertierung/src/test/StringUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Konvertierung/src/test/StringUtilsTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1lenpEgyCwCJit4WeS8q3OUuKmU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="842508ff-274a-448a-83e0-e21e85e7d41f" name="Default Changelist" comment="" />
+      <created>1607966605459</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607966605459</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

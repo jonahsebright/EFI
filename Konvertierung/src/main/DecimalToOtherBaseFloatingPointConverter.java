@@ -2,6 +2,7 @@ package main;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.math.MathContext;
 
 public class DecimalToOtherBaseFloatingPointConverter extends DecimalToOtherBaseConverter {
     public DecimalToOtherBaseFloatingPointConverter(int otherBase) {
@@ -35,7 +36,7 @@ public class DecimalToOtherBaseFloatingPointConverter extends DecimalToOtherBase
         //return -posMag;
         //int posMag = calculateHigherBaseMagnitude(decimal.intValue(), otherBase);
         int mag = 0;
-        while (decimal.compareTo(getHigherBaseToPowerMag(otherBase, mag)) >= 0) {
+        while (decimal.compareTo(getHigherBaseToPowerMag(otherBase, mag)) <= 0) {
             mag--;
         }
         return mag;
@@ -44,6 +45,9 @@ public class DecimalToOtherBaseFloatingPointConverter extends DecimalToOtherBase
     }
 
     private static BigDecimal getHigherBaseToPowerMag(int higherBase, int mag) {
+        if (mag < 0) {
+            return BigDecimal.ONE.divide(getHigherBaseToPowerMag(higherBase, -mag), MathContext.DECIMAL128);
+        }
         return BigDecimal.valueOf(higherBase).pow(mag);
     }
 
