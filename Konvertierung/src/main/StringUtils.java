@@ -1,3 +1,5 @@
+package main;
+
 public class StringUtils {
     public static String getRegexCharsOfBase(int base) {
         StringBuilder chars = new StringBuilder("01");

@@ -1,3 +1,7 @@
+package test;
+
+import main.DecimalToOtherBaseFloatingPointConverter;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,13 +14,13 @@ class DecimalToOtherBaseFloatingPointConverterTest {
 
     @Test
     void calculateOtherBaseNegativeMagnitude() {
-        assertEquals(0, DecimalToOtherBaseFloatingPointConverter
+        Assertions.assertEquals(0, DecimalToOtherBaseFloatingPointConverter
                 .calculateOtherBaseNegativeMagnitude(0, 2));
-        assertEquals(-0, DecimalToOtherBaseFloatingPointConverter
+        Assertions.assertEquals(-0, DecimalToOtherBaseFloatingPointConverter
                 .calculateOtherBaseNegativeMagnitude(1, 2));
-        assertEquals(-1, DecimalToOtherBaseFloatingPointConverter
+        Assertions.assertEquals(-1, DecimalToOtherBaseFloatingPointConverter
                 .calculateOtherBaseNegativeMagnitude(2, 2));
-        assertEquals(-2, DecimalToOtherBaseFloatingPointConverter
+        Assertions.assertEquals(-2, DecimalToOtherBaseFloatingPointConverter
                 .calculateOtherBaseNegativeMagnitude(75, 2));
     }
 }
