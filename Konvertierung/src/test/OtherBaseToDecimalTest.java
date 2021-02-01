@@ -36,6 +36,15 @@ class OtherBaseToDecimalTest {
     }
 
     @Test
+    public void base15ToDecimal() throws Exception {
+        converter = new OtherBaseToDecimalConverter(15);
+        Assertions.assertEquals("3616", converter.convert("1111"));
+        Assertions.assertEquals("183063616", converter.convert("11111111"));
+        Assertions.assertEquals("31278135027204241", converter.convert("111111111111111"));
+
+    }
+
+    @Test
     void hexadecimalToDecimal() {
         converter = new OtherBaseToDecimalConverter(16);
         Assertions.assertEquals("1", converter.convert("1"));

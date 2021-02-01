@@ -15,12 +15,12 @@ public class BisAufgabe8 {
         alpha();
     }
 
-    public static void println(){
+    public static void println() {
         System.out.println();
     }
 
-    public static void dumpStack(){
-        System.out.println("dumpStack()");
+    public static void dumpStack() {
+        Thread.dumpStack();
     }
 
 }
