@@ -10,5 +10,6 @@ public class Haus {
         Point topRight = new Point(centerX + halfLength, centerY + halfLength);
         StdDrawUtil.drawLine(topLeft, topMiddle);
         StdDrawUtil.drawLine(topMiddle, topRight);
+        StdDraw.save();
     }
 }

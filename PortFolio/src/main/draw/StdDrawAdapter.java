@@ -3,8 +3,11 @@ package main.draw;
 import main.schildkroete.SchildkroeteImpl;
 
 import java.awt.*;
+import java.lang.reflect.Executable;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.concurrent.Executor;
+import java.util.function.Function;
 
 /**
  * creates a static instance of of the class "StdDraw" and provides basic methods to interact with it.
@@ -18,23 +21,38 @@ class StdDrawAdapter {
     private static Class<?> stdDraw;
     private static Method setPenColor;
     private static Method line;
+    private static Method setPenRadius;
+    private static Method save;
 
     static {
         try {
             stdDraw = Class.forName("StdDraw");
             setPenColor = stdDraw.getMethod("setPenColor", Color.class);
             setPenColor(Color.BLACK);
-
             line = stdDraw.getMethod("line", double.class, double.class, double.class, double.class);
+            setPenRadius = stdDraw.getMethod("setPenRadius", double.class);
+            save = stdDraw.getMethod("save", String.class);
         } catch (ClassNotFoundException | NoSuchMethodException e) {
             e.printStackTrace();
         }
 
     }
 
+    private interface Executable<T>{
+        T execute();
+    }
+
     public static void setPenColor(Color color) {
         try {
             setPenColor.invoke(stdDraw, color);
+        } catch (IllegalAccessException | InvocationTargetException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void setPenRadius(double radius) {
+        try {
+            setPenRadius.invoke(stdDraw, radius);
         } catch (IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
         }
@@ -48,4 +66,11 @@ class StdDrawAdapter {
         }
     }
 
+    public static void save(String filename){
+        try {
+            save.invoke(save, filename);
+        } catch (IllegalAccessException | InvocationTargetException e) {
+            e.printStackTrace();
+        }
+    }
 }

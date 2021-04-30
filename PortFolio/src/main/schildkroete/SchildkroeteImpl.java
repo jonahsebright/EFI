@@ -15,9 +15,36 @@ public class SchildkroeteImpl implements Schildkroete {
     /**
      * instance of current pos of this {@link Schildkroete} instance
      */
-    private final Point currentPos = Point.ORIGIN();
+    private final Point currentPos;
 
     private final Drawer drawer = new StdDrawer();
+
+    private static final double DEFAULT_PEN_RADIUS = 0.005;
+
+    private double penRadius = DEFAULT_PEN_RADIUS;
+
+    public SchildkroeteImpl() {
+        this(Point.ORIGIN());
+    }
+
+    public SchildkroeteImpl(double penRadius) {
+        this(Point.ORIGIN(), penRadius);
+    }
+
+    public SchildkroeteImpl(Point startingPos) {
+        this(startingPos, DEFAULT_PEN_RADIUS);
+    }
+
+    public SchildkroeteImpl(Point startingPos, double penRadius) {
+        currentPos = startingPos;
+        this.penRadius = penRadius;
+    }
+
+    @Override
+    public void setPenRadius(double penRadius) {
+        this.penRadius = penRadius;
+        drawer.setPenRadius(penRadius);
+    }
 
     public static void main(String[] args) {
         SchildkroeteImpl schildkroete = new SchildkroeteImpl();
@@ -26,9 +53,9 @@ public class SchildkroeteImpl implements Schildkroete {
         schildkroete.direction(45);
         schildkroete.move(Math.sqrt(2) / 2);
 
-        schildkroete.direction(90);
+        schildkroete.direction(45);
         schildkroete.move(0.2);
-        schildkroete.drawPolygon(6, 0.2);
+        schildkroete.drawPolygon(5, 0.2);
     }
 
     public double getDirection() {
@@ -45,13 +72,12 @@ public class SchildkroeteImpl implements Schildkroete {
         System.out.println("exteriorAngle = " + exteriorAngle);
         double sideLength = getSideLengthOfPolygon(radiusToCorners, numCorners);
         System.out.println("sideLength = " + sideLength);
-        double currentAngle = 180 + exteriorAngle / 2;
+        direction(90 - (exteriorAngle / 2));
 
         for (int i = 0; i < numCorners; i++) {
-            //double angle = 180 + 360 / 5d * i;
-            direction(currentAngle);
+            direction(exteriorAngle);
             move(sideLength);
-            currentAngle += exteriorAngle;
+            //currentAngle += exteriorAngle;
         }
     }
 
@@ -70,8 +96,11 @@ public class SchildkroeteImpl implements Schildkroete {
 
     @Override
     public void direction(double deg) {
-        direction = deg;
+        direction += deg;
     }
 
-
+    @Override
+    public void saveImage(String filename) {
+        drawer.saveImage(filename);
+    }
 }

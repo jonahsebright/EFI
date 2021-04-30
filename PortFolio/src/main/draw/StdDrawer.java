@@ -7,4 +7,14 @@ public class StdDrawer implements Drawer {
     public void drawLine(Point from, Point to){
         StdDrawAdapter.line(from.getX(), from.getY(), to.getX(), to.getY());
     }
+
+    @Override
+    public void setPenRadius(double radius) {
+        StdDrawAdapter.setPenRadius(radius);
+    }
+
+    @Override
+    public void saveImage(String filename) {
+        StdDrawAdapter.save(filename);
+    }
 }
