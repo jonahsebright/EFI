@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Monsterkurve.iml" filepath="$PROJECT_DIR$/Monsterkurve.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/schildkroete/schildkroete.iml" filepath="$PROJECT_DIR$/src/schildkroete/schildkroete.iml" />
+    </modules>
+  </component>
+</project>
