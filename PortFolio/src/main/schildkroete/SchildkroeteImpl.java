@@ -103,4 +103,9 @@ public class SchildkroeteImpl implements Schildkroete {
     public void saveImage(String filename) {
         drawer.saveImage(filename);
     }
+
+    @Override
+    public Drawer getDrawer() {
+        return drawer;
+    }
 }

@@ -14,7 +14,7 @@ public class Schneeflocke {
     private final Schildkroete kroete = new SchildkroeteImpl(new Point(0.1, 0.2));
 
     public static void main(String[] args) {
-        int level = 11;
+        int level = 6;
         Schneeflocke schneeflocke = new Schneeflocke();
         long timeStart = System.currentTimeMillis();
         schneeflocke.schneeflocke(level, 0.8);

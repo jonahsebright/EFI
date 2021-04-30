@@ -1,5 +1,7 @@
 package main.schildkroete;
 
+import main.draw.Drawer;
+
 public interface Schildkroete {
 
     void move(double distance);
@@ -12,4 +14,6 @@ public interface Schildkroete {
     void setPenRadius(double radius);
 
     void saveImage(String filename);
+
+    Drawer getDrawer();
 }
