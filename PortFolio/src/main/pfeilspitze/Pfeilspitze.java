@@ -1,10 +1,12 @@
 package main.pfeilspitze;
 
+import main.Fractal;
+import main.draw.Drawer;
 import main.math.graph.Point;
 import main.schildkroete.Schildkroete;
 import main.schildkroete.SchildkroeteImpl;
 
-public class Pfeilspitze {
+public class Pfeilspitze extends Fractal {
 
     private final Schildkroete schildkroete = new SchildkroeteImpl(new Point(0.1, 0.2));
 
@@ -15,8 +17,23 @@ public class Pfeilspitze {
     public static void main(String[] args) {
         Pfeilspitze pfeilspitze = new Pfeilspitze();
         pfeilspitze.getSchildkroete().setPenRadius(0.0005);
-        int level = 9;
+        int level = pfeilspitze.getDefaultDepth();
         pfeilspitze.pfeilspitze(level, 0.8);
+    }
+
+    @Override
+    public int getDefaultDepth() {
+        return 6;
+    }
+
+    @Override
+    public void draw(int depth) {
+        pfeilspitze(depth, 0.8);
+    }
+
+    @Override
+    public Drawer getDrawer() {
+        return schildkroete.getDrawer();
     }
 
     public void pfeilspitze(int level, double length) {

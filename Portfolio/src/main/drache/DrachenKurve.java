@@ -1,10 +1,12 @@
 package main.drache;
 
+import main.Fractal;
+import main.draw.Drawer;
 import main.math.graph.Point;
 import main.schildkroete.Schildkroete;
 import main.schildkroete.SchildkroeteImpl;
 
-public class DrachenKurve {
+public class DrachenKurve extends Fractal {
 
     public static double SQRT_2 = Math.sqrt(2);
 
@@ -12,7 +14,26 @@ public class DrachenKurve {
 
     public static void main(String[] args) {
         DrachenKurve drachenKurve = new DrachenKurve();
-        drachenKurve.drache(13, 0.4, true);
+        drachenKurve.drache(15);
+    }
+
+    @Override
+    public int getDefaultDepth() {
+        return 11;
+    }
+
+    @Override
+    public void draw(int depth) {
+        drache(depth);
+    }
+
+    @Override
+    public Drawer getDrawer() {
+        return schildkroete.getDrawer();
+    }
+
+    public void drache(int depth) {
+       drache(depth, 0.4, true);
     }
 
     public void drache(int level, double length, boolean direction) {

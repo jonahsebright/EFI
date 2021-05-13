@@ -13,7 +13,5 @@ public interface Schildkroete {
 
     void setPenRadius(double radius);
 
-    void saveImage(String filename);
-
     Drawer getDrawer();
 }

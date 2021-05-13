@@ -17,4 +17,9 @@ public class StdDrawer implements Drawer {
     public void saveImage(String filename) {
         StdDrawAdapter.save(filename);
     }
+
+    @Override
+    public void clear() {
+        StdDrawAdapter.clear();
+    }
 }

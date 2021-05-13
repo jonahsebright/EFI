@@ -1,20 +1,22 @@
 package main.schneeflocke;
 
 import flanagan.io.Db;
+import main.Fractal;
+import main.draw.Drawer;
 import main.math.graph.Point;
 import main.schildkroete.Schildkroete;
 import main.schildkroete.SchildkroeteImpl;
 
-public class Schneeflocke {
+public class Schneeflocke extends Fractal {
 
     private final static int LENGTH_DIVIDER = 3;
 
     private int moveCount = 0;
 
-    private final Schildkroete kroete = new SchildkroeteImpl(new Point(0.1, 0.2));
+    private final Schildkroete schildkroete = new SchildkroeteImpl(new Point(0.1, 0.27));
 
     public static void main(String[] args) {
-        int level = 6;
+        int level = 7;
         Schneeflocke schneeflocke = new Schneeflocke();
         long timeStart = System.currentTimeMillis();
         schneeflocke.schneeflocke(level, 0.8);
@@ -27,60 +29,59 @@ public class Schneeflocke {
         System.out.println("move count = " + schneeflocke.getMoveCount());
 
         Db.show("Finished drawing Scheeflocke with a level of " + level
-                +"\nThe duration was " + formattedDuration
+                + "\nThe duration was " + formattedDuration
                 + " and the move count is " + schneeflocke.moveCount);
         boolean save = Db.yesNo("Would you like to save the image as a png file?");
-        if (save) schneeflocke.saveImage("schneeflocke_level_" + level + "_" + timeEnd + ".png");
+        if (save) schneeflocke.savePng("schneeflocke_level_" + level + "_" + timeEnd);
     }
 
-    public void saveImage(String filename) {
-        kroete.saveImage(filename);
+    @Override
+    public int getDefaultDepth() {
+        return 5;
+    }
+
+    @Override
+    public void draw(int depth) {
+        schneeflocke(depth, 0.8);
+    }
+
+    @Override
+    public Drawer getDrawer() {
+        return schildkroete.getDrawer();
     }
 
     public int getMoveCount() {
         return moveCount;
     }
 
-    private void schneeflocke0(double sideLength) {
-        kroete.move(sideLength);
-        moveCount++;
-    }
-
-    private void schneeflocke1(double sideLength) {
-        double dividedSideLength = sideLength / LENGTH_DIVIDER;
-        schneeflocke0(dividedSideLength);
-        kroete.direction(60);
-        schneeflocke0(dividedSideLength);
-        kroete.direction(-120);
-        schneeflocke0(dividedSideLength);
-        kroete.direction(60);
-        schneeflocke0(dividedSideLength);
-    }
-
     public void schneeflocke(int level, double sideLength) {
         moveCount = 0;
         System.out.println("Drawing schneeflocke...");
-        if (level > 4) kroete.setPenRadius(0.001);
-        if (level > 7) kroete.setPenRadius(0.0005);
+        if (level > 4) schildkroete.setPenRadius(0.001);
+        if (level > 7) schildkroete.setPenRadius(0.0005);
+        schildkroete.direction(60);
+        schneeflockeRecursive(level, sideLength);
+        schildkroete.direction(-120);
+        schneeflockeRecursive(level, sideLength);
+        schildkroete.direction(-120);
         schneeflockeRecursive(level, sideLength);
         System.out.println("Finished drawing schneeflocke");
     }
 
-    public void schneeflockeRecursive(int level, double sideLength) {
-
+    private void schneeflockeRecursive(int level, double sideLength) {
         if (level == 0) {
-            schneeflocke0(sideLength);
+            schildkroete.move(sideLength);
+            moveCount++;
             return;
         }
-
         level--;
         double dividedSideLength = sideLength / LENGTH_DIVIDER;
         schneeflockeRecursive(level, dividedSideLength);
-        kroete.direction(60);
+        schildkroete.direction(60);
         schneeflockeRecursive(level, dividedSideLength);
-        kroete.direction(-120);
+        schildkroete.direction(-120);
         schneeflockeRecursive(level, dividedSideLength);
-        kroete.direction(60);
+        schildkroete.direction(60);
         schneeflockeRecursive(level, dividedSideLength);
     }
 }

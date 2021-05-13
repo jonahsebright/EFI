@@ -7,5 +7,7 @@ public interface Drawer {
 
     void setPenRadius(double radius);
 
+    void clear();
+
     void saveImage(String filename);
 }

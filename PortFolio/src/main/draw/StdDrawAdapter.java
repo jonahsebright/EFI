@@ -22,6 +22,7 @@ class StdDrawAdapter {
     private static Method setPenColor;
     private static Method line;
     private static Method setPenRadius;
+    private static Method clear;
     private static Method save;
 
     static {
@@ -31,15 +32,12 @@ class StdDrawAdapter {
             setPenColor(Color.BLACK);
             line = stdDraw.getMethod("line", double.class, double.class, double.class, double.class);
             setPenRadius = stdDraw.getMethod("setPenRadius", double.class);
+            clear = stdDraw.getMethod("clear");
             save = stdDraw.getMethod("save", String.class);
         } catch (ClassNotFoundException | NoSuchMethodException e) {
             e.printStackTrace();
         }
 
-    }
-
-    private interface Executable<T>{
-        T execute();
     }
 
     public static void setPenColor(Color color) {
@@ -68,7 +66,15 @@ class StdDrawAdapter {
 
     public static void save(String filename){
         try {
-            save.invoke(save, filename);
+            save.invoke(stdDraw, filename);
+        } catch (IllegalAccessException | InvocationTargetException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void clear() {
+        try {
+            clear.invoke(stdDraw);
         } catch (IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
         }
