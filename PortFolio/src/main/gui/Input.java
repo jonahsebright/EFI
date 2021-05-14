@@ -1,7 +1,6 @@
 package main.gui;
 
 import flanagan.io.Db;
-import main.fractal.Fractal;
 
 import javax.swing.*;
 

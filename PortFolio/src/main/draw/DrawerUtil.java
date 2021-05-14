@@ -1,7 +1,7 @@
 package main.draw;
 
-import main.schildkroete.Schildkroete;
 import main.math.graph.Point;
+import main.schildkroete.Schildkroete;
 
 public class DrawerUtil {
     public static void drawPolygon(int numCorners, double radiusToCorners, Point center) {

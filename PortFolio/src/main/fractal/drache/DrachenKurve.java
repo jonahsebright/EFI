@@ -1,9 +1,7 @@
 package main.fractal.drache;
 
 import main.fractal.Fractal;
-import main.draw.Drawer;
 import main.math.graph.Point;
-import main.schildkroete.Schildkroete;
 
 public class DrachenKurve extends Fractal {
 
