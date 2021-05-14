@@ -3,18 +3,20 @@ package main.fractal.drache;
 import main.fractal.Fractal;
 import main.draw.Drawer;
 import main.math.graph.Point;
-import main.fractal.schildkroete.Schildkroete;
-import main.fractal.schildkroete.SchildkroeteImpl;
+import main.schildkroete.Schildkroete;
 
 public class DrachenKurve extends Fractal {
 
     public static double SQRT_2 = Math.sqrt(2);
 
-    private final Schildkroete schildkroete = new SchildkroeteImpl(new Point(0.25, 0.5));
-
     public static void main(String[] args) {
         DrachenKurve drachenKurve = new DrachenKurve();
         drachenKurve.drache(15);
+    }
+
+    @Override
+    protected Point getStartingPoint() {
+        return new Point(0.25, 0.5);
     }
 
     @Override
@@ -23,22 +25,19 @@ public class DrachenKurve extends Fractal {
     }
 
     @Override
-    public void draw(int depth) {
+    public void drawAbstr(int depth) {
         drache(depth);
     }
 
-    @Override
-    public Drawer getDrawer() {
-        return schildkroete.getDrawer();
-    }
-
     public void drache(int depth) {
-       drache(depth, 0.4, true);
+        getDrawer().setPenRadius(0.002);
+        drache(depth, 0.4, true);
     }
 
     public void drache(int level, double length, boolean direction) {
         if (level == 0) {
             schildkroete.move(length);
+            incrementMoveCount();
             return;
         }
         int degreeLeft = direction ? -45 : 45;

@@ -1,6 +1,6 @@
 package main.draw;
 
-import main.fractal.schildkroete.SchildkroeteImpl;
+import main.schildkroete.Schildkroete;
 
 import java.awt.*;
 import java.lang.reflect.InvocationTargetException;
@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
 /**
  * creates a static instance of of the class "StdDraw" and provides basic methods to interact with it.
  * The reason is, that the Class "StdDraw" is in a default package and cannot imported to a named package
- * (the package of {@link SchildkroeteImpl}.
+ * (the package of {@link Schildkroete}.
  * <p>
  * The solution is to create an instance of this class by calling
  * <code>stdDraw = Class.forName("StdDraw");</code>

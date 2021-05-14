@@ -35,21 +35,16 @@ public class Input {
         return Db.yesNo("Would you like to quit?");
     }
 
-    public static void askSave(Fractal fractal, String option, int depth) {
-        boolean save = Db.yesNo("Would you like to save the image as a .png file?");
-        if (!save) return;
-        String filename = readFilename(option, depth);
-        fractal.savePng(filename);
-        JOptionPane.showMessageDialog(null, "Saved the image!",
-                filename, JOptionPane.INFORMATION_MESSAGE);
+    public static boolean askSave() {
+        return Db.yesNo("Would you like to save the image as a .png file?");
     }
 
-    private static String readFilename(String option, int depth) {
-        String filename = Db.readLine("Filename", option + "_depth_" + depth);
+    public static String readFilename(String fractalName, int depth) {
+        String filename = Db.readLine("Filename", fractalName + "_depth_" + depth);
         filename = filename.trim();
         if (filename.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Filename cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
-            return readFilename(option, depth);
+            return readFilename(fractalName, depth);
         } else return filename;
     }
 

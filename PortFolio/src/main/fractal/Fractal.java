@@ -3,7 +3,9 @@ package main.fractal;
 import main.draw.Drawer;
 import main.fractal.drache.DrachenKurve;
 import main.fractal.pfeilspitze.Pfeilspitze;
-import main.schneeflocke.Schneeflocke;
+import main.fractal.schneeflocke.Schneeflocke;
+import main.math.graph.Point;
+import main.schildkroete.Schildkroete;
 
 public abstract class Fractal {
     public static final String PFEIL_SPITZE = "Pfeilspitze";
@@ -21,9 +23,36 @@ public abstract class Fractal {
         };
     }
 
+    private int moveCount = 0;
+
+    protected final Schildkroete schildkroete = new Schildkroete(getStartingPoint());
+
+    public int getMoveCount() {
+        return moveCount;
+    }
+
+    protected void incrementMoveCount() {
+        moveCount++;
+    }
+
+    public Schildkroete getSchildkroete() {
+        return schildkroete;
+    }
+
+    public Drawer getDrawer(){
+        return schildkroete.getDrawer();
+    }
+
+    protected abstract Point getStartingPoint();
+
     public abstract int getDefaultDepth();
 
-    public abstract void draw(int depth);
+    public void draw(int depth){
+       moveCount = 0;
+       drawAbstr(depth);
+    }
+
+    public abstract void drawAbstr(int depth);
 
     /**
      * @param filename the filename without the suffix (e.g. ".png")
@@ -31,6 +60,4 @@ public abstract class Fractal {
     public void savePng(String filename){
         getDrawer().saveImage(filename + ".png");
     }
-
-    public abstract Drawer getDrawer();
 }
