@@ -1,4 +1,4 @@
-package main.schildkroete;
+package main.fractal.schildkroete;
 
 import main.draw.Drawer;
 import main.draw.StdDrawer;

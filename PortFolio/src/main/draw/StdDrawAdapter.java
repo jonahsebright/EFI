@@ -1,13 +1,10 @@
 package main.draw;
 
-import main.schildkroete.SchildkroeteImpl;
+import main.fractal.schildkroete.SchildkroeteImpl;
 
 import java.awt.*;
-import java.lang.reflect.Executable;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.concurrent.Executor;
-import java.util.function.Function;
 
 /**
  * creates a static instance of of the class "StdDraw" and provides basic methods to interact with it.

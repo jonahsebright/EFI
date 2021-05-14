@@ -1,11 +1,11 @@
 package main.schneeflocke;
 
 import flanagan.io.Db;
-import main.Fractal;
+import main.fractal.Fractal;
 import main.draw.Drawer;
 import main.math.graph.Point;
-import main.schildkroete.Schildkroete;
-import main.schildkroete.SchildkroeteImpl;
+import main.fractal.schildkroete.Schildkroete;
+import main.fractal.schildkroete.SchildkroeteImpl;
 
 public class Schneeflocke extends Fractal {
 

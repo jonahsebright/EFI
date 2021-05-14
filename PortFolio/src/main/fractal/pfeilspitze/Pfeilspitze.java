@@ -1,10 +1,10 @@
-package main.pfeilspitze;
+package main.fractal.pfeilspitze;
 
-import main.Fractal;
+import main.fractal.Fractal;
 import main.draw.Drawer;
 import main.math.graph.Point;
-import main.schildkroete.Schildkroete;
-import main.schildkroete.SchildkroeteImpl;
+import main.fractal.schildkroete.Schildkroete;
+import main.fractal.schildkroete.SchildkroeteImpl;
 
 public class Pfeilspitze extends Fractal {
 
