@@ -39,7 +39,7 @@ public abstract class Fractal {
         return schildkroete;
     }
 
-    public Drawer getDrawer(){
+    public Drawer getDrawer() {
         return schildkroete.getDrawer();
     }
 
@@ -47,17 +47,29 @@ public abstract class Fractal {
 
     public abstract int getDefaultDepth();
 
-    public void draw(int depth){
-       moveCount = 0;
-       drawAbstr(depth);
+    public PerformanceResult draw(int depth) {
+        moveCount = 0;
+        long timeStart = System.currentTimeMillis();
+        drawAbstr(depth);
+        long timeEnd = System.currentTimeMillis();
+        long duration = timeEnd - timeStart;
+        return new PerformanceResult(duration, moveCount);
     }
 
-    public abstract void drawAbstr(int depth);
+    protected abstract void drawAbstr(int depth);
 
     /**
      * @param filename the filename without the suffix (e.g. ".png")
      */
-    public void savePng(String filename){
+    public void savePng(String filename) {
         getDrawer().saveImage(filename + ".png");
     }
+
+    public void clear() {
+        getDrawer().clear();
+        schildkroete.setDirection(0);
+        schildkroete.setPosition(getStartingPoint());
+    }
+
+
 }

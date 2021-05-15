@@ -23,7 +23,7 @@ public class Monsterkurve {
         };
 
         if (Input._continue()) {
-            clearDrawing(fractal);
+            fractal.clear();
             main(args);
         } else System.exit(0);
     }
@@ -34,9 +34,4 @@ public class Monsterkurve {
         JOptionPane.showMessageDialog(null, "Saved the image!",
                 filename, JOptionPane.INFORMATION_MESSAGE);
     }
-
-    private static void clearDrawing(Fractal fractal) {
-        fractal.getDrawer().clear();
-    }
-
 }

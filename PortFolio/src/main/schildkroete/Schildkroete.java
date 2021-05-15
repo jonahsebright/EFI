@@ -39,6 +39,15 @@ public class Schildkroete {
         setPenRadius(penRadius);
     }
 
+    public void setDirection(double direction) {
+        this.direction = direction;
+    }
+
+    public void setPosition(Point point) {
+        currentPos.setX(point.getX());
+        currentPos.setY(point.getY());
+    }
+
     public void setPenRadius(double penRadius) {
         drawer.setPenRadius(penRadius);
     }
