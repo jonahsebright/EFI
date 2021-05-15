@@ -6,19 +6,23 @@ import main.fractal.drache.DrachenKurve;
 import main.fractal.pfeilspitze.Pfeilspitze;
 import main.fractal.schneeflocke.Schneeflocke;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class ImageGenerator {
     public static final String TAG = "ImageGenerator";
 
     public static void main(String[] args) {
-        //generateImages(new Schneeflocke(), "Schneeflocke", until(0, 8, 1));//1, 3, 7);
-        generateImages(new Pfeilspitze(), "Pfeilspitze", until(0, 8, 1));//1, 4, 9);
-        //generateImages(new DrachenKurve(), "DrachenKurve", until(0, 14, 2));//1, 5, 14);
+       // ScaledPerformanceResult scaledPerformanceResult = generateImages(new Schneeflocke(), "Schneeflocke", 3, until(7, 8, 1));//1, 3, 7);
+        ScaledPerformanceResult scaledPerformanceResult = generateImages(new Pfeilspitze(), "Pfeilspitze",6,  until(6, 8, 1));//1, 4, 9);
+        //generateImages(new DrachenKurve(), "DrachenKurve", 5, until(0, 8, 2));//1, 5, 14);
+        System.out.println("scaledPerformanceResult Pfeilspitze= " + scaledPerformanceResult);
     }
 
     private static int[] until(int start, int until, int d) {
-        int length = (until - start + 1)/d+1;
+        int num = (until - start + 1);
+        int length = num % d == 0 ? num / d : num / d + 1;
         int[] result = new int[length];
         for (int i = 0; i < length; i++) {
             result[i] = start + i * d;
@@ -26,15 +30,22 @@ public class ImageGenerator {
         return result;
     }
 
-    private static void generateImages(Fractal fractal, String name, int... depths) {
+    private static ScaledPerformanceResult generateImages(Fractal fractal, String name, int times, int... depths) {
         System.out.println("ImageGenerator.generateImages");
+        ScaledPerformanceResult result = new ScaledPerformanceResult();
         System.out.println("fractal = " + fractal + ", name = " + name + ", depths = " + Arrays.toString(depths));
         for (int depth : depths) {
             System.out.println("depth = " + depth);
-            PerformanceResult performanceResult = fractal.draw(depth);
-            System.out.println("performanceResult = " + performanceResult);
-            fractal.savePng(TAG + "_" + name + "_" + depth);
-            fractal.clear();
+            List<Long> durations = new ArrayList<>();
+            for (int i = 0; i < times; i++) {
+                PerformanceResult performanceResult = fractal.draw(depth);
+                durations.add(performanceResult.getDurationMillis());
+                System.out.println("performanceResult = " + performanceResult);
+                fractal.savePng(TAG + "_" + name + "_" + depth);
+                fractal.clear();
+            }
+            result.addSmallResult(new Pair<>(depth, durations));
         }
+        return result;
     }
 }
