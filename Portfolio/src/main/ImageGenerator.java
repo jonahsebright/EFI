@@ -13,8 +13,8 @@ public class ImageGenerator {
 
     public static void main(String[] args) {
         //generateImages(new Schneeflocke(), "Schneeflocke", until(0, 8, 1));//1, 3, 7);
-        //generateImages(new Pfeilspitze(), "Pfeilspitze", until(0, 8, 1));//1, 4, 9);
-        generateImages(new DrachenKurve(), "DrachenKurve", until(0, 14, 2));//1, 5, 14);
+        generateImages(new Pfeilspitze(), "Pfeilspitze", until(0, 8, 1));//1, 4, 9);
+        //generateImages(new DrachenKurve(), "DrachenKurve", until(0, 14, 2));//1, 5, 14);
     }
 
     private static int[] until(int start, int until, int d) {
