@@ -29,7 +29,7 @@ public class DrachenKurve extends Fractal {
 
     public void drache(int depth) {
         getDrawer().setPenRadius(0.002);
-        drache(depth, 0.4, true);
+        drache(depth, 0.41, true);
     }
 
     public void drache(int level, double length, boolean direction) {
