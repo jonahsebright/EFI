@@ -9,17 +9,17 @@ public class Main {
 
     public static void main(String[] args) {
         int kurvenSelection = Input.getMonsterkurveSelection(Monsterkurve.NAMES);
-        String fractalName = Monsterkurve.NAMES[kurvenSelection - 1];
-        System.out.println("fractal = " + fractalName);
+        String kurveName = Monsterkurve.NAMES[kurvenSelection - 1];
+        System.out.println("monsterkurve = " + kurveName);
 
-        Monsterkurve monsterkurve = Monsterkurve.getFractalFromName(fractalName);
+        Monsterkurve monsterkurve = Monsterkurve.getFractalFromName(kurveName);
 
-        int depth = Input.readDepth(fractalName, monsterkurve.getDefaultDepth());
+        int depth = Input.readDepth(kurveName, monsterkurve.getDefaultDepth());
         monsterkurve.draw(depth);
 
         boolean save = Input.askSave();
 
-        if (save) attemptSaveImage(fractalName, monsterkurve, depth);
+        if (save) attemptSaveImage(kurveName, monsterkurve, depth);
 
         if (Input._continue()) {
             monsterkurve.clear();

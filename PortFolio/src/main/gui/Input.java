@@ -5,7 +5,7 @@ import flanagan.io.Db;
 import javax.swing.*;
 
 public class Input {
-    public static int getMonsterkurveSelection(String[] monsterkurvenNames){
+    public static int getMonsterkurveSelection(String[] monsterkurvenNames) {
         int selection = Db.optionBox("Welche Monsterkurve möchten Sie sehen?", monsterkurvenNames, monsterkurvenNames, 1);
         if (selection == 0) {
             checkQuit();
@@ -20,6 +20,10 @@ public class Input {
         System.out.println("depth = " + depth);
         if (depth < 0) {
             JOptionPane.showMessageDialog(null, "Die eingebene Stufe war negativ!",
+                    "Fehler", JOptionPane.ERROR_MESSAGE);
+            return readDepth(option, defaultDepth);
+        } else if (depth > 100) {
+            JOptionPane.showMessageDialog(null, "Die eingebene Stufe war zu gross! Das maximum ist 100",
                     "Fehler", JOptionPane.ERROR_MESSAGE);
             return readDepth(option, defaultDepth);
         }

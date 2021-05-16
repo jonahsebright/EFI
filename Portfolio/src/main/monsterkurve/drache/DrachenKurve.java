@@ -21,22 +21,55 @@ public class DrachenKurve extends Monsterkurve {
 
     public static void main(String[] args) {
         DrachenKurve drachenKurve = new DrachenKurve();
-        drachenKurve.drache(13);
-        double areaRectangle = drachenKurve.getAreaRectangle();
-        System.out.println("areaRectangle = " + areaRectangle);
-        double areaCurve = drachenKurve.getCurveArea();
-        System.out.println("areaCurve = " + areaCurve);
-        double coverage = areaCurve / areaRectangle;
-        System.out.println("coverage = " + coverage);
 
-        Schildkroete schildkroete = drachenKurve.getSchildkroete();
-        schildkroete.getDrawer().setPenColor(Color.RED);
-        schildkroete.setPenRadius(0.002);
-        schildkroete.setPosition(new Point(drachenKurve.lowestX, drachenKurve.lowestY));
-        DrawerUtil.drawRectangleFromBottomLeft(schildkroete,
-                drachenKurve.getHeight(), drachenKurve.getWidth());
-        schildkroete.setPenRadius(PEN_RADIUS);
-        schildkroete.getDrawer().setPenColor(Color.BLACK);
+        Integer[] depths = {0, 2, 4, 5, 6, 8, 10, 12, 14, 15};
+        Double[] rectangles = new Double[depths.length];
+        Double[] curveAreas = new Double[depths.length];
+        Double[] curveCoverages = new Double[depths.length];
+
+        for (int i = 0; i < depths.length; i++) {
+            drachenKurve.drache(depths[i]);
+            double areaRectangle = drachenKurve.getAreaRectangle();
+            double areaCurve = drachenKurve.getCurveArea();
+            double coverage = areaCurve / areaRectangle;
+            rectangles[i] = areaRectangle;
+            curveAreas[i] = areaCurve;
+            curveCoverages[i] = coverage;
+
+            Schildkroete schildkroete = drachenKurve.getSchildkroete();
+
+            //draw rectangle
+            schildkroete.getDrawer().setPenColor(Color.RED);
+            schildkroete.setPenRadius(0.002);
+            schildkroete.setPosition(new Point(drachenKurve.lowestX, drachenKurve.lowestY));
+            DrawerUtil.drawRectangleFromBottomLeft(schildkroete,
+                    drachenKurve.getHeight(), drachenKurve.getWidth());
+
+            schildkroete.getDrawer().saveImage("Drachenkurve_Flächen_berechnung_" + depths[i] + ".png");
+
+            //reset schildkroete after moving it around
+            schildkroete.setPenRadius(PEN_RADIUS);
+            schildkroete.getDrawer().setPenColor(Color.BLACK);
+            drachenKurve.clear();
+        }
+        printTableView(new String[]{"Depth", "Rectangle area", "Curve area", "Converage"},
+                new Object[][]{depths, rectangles, curveAreas, curveCoverages});
+    }
+
+    private static void printTableView(String[] headers, Object[][] items) {
+        StringBuilder headerPrint = new StringBuilder(headers[0]);
+        int numColoums = headers.length;
+        for (int i = 1; i < numColoums; i++) {
+            headerPrint.append("\t\t\t\t\t").append(headers[i]);
+        }
+        System.out.println(headerPrint);
+        for (int i = 0; i < items[0].length; i++) {
+            StringBuilder rowPrint = new StringBuilder(String.valueOf(items[0][i]));
+            for (int j = 1; j < numColoums; j++) {
+                rowPrint.append("\t\t\t").append(items[j][i]);
+            }
+            System.out.println(rowPrint);
+        }
     }
 
     private double getHeight() {
@@ -87,7 +120,7 @@ public class DrachenKurve extends Monsterkurve {
     public void drache(int level, double length, boolean direction) {
         if (level == 0) {
             schildkroete.move(length);
-            curveArea += length * PEN_RADIUS;
+            curveArea += (length - PEN_RADIUS) * PEN_RADIUS;
             checkReachedLowestOrHighestPoint();
             incrementMoveCount();
         } else {
