@@ -17,7 +17,7 @@ public class DrachenKurve extends Monsterkurve {
     private double curveArea = 0;
 
     public static double SQRT_2 = Math.sqrt(2);
-    private static final double PEN_RADIUS = 0.001;
+    private static final double PEN_RADIUS = 0.0014;
 
     public static void main(String[] args) {
         DrachenKurve drachenKurve = new DrachenKurve();
