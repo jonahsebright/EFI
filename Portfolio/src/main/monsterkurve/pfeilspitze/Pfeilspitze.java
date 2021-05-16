@@ -1,7 +1,7 @@
-package main.fractal.pfeilspitze;
+package main.monsterkurve.pfeilspitze;
 
 import main.draw.Drawer;
-import main.fractal.Monsterkurve;
+import main.monsterkurve.Monsterkurve;
 import main.math.graph.Point;
 
 public class Pfeilspitze extends Monsterkurve {

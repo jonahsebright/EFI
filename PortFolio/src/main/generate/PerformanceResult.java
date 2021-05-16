@@ -1,4 +1,4 @@
-package main.fractal;
+package main.generate;
 
 public class PerformanceResult {
     private final long durationMillis;

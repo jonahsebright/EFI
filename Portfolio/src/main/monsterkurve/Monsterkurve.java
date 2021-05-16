@@ -1,9 +1,10 @@
-package main.fractal;
+package main.monsterkurve;
 
 import main.draw.Drawer;
-import main.fractal.drache.DrachenKurve;
-import main.fractal.pfeilspitze.Pfeilspitze;
-import main.fractal.schneeflocke.Schneeflocke;
+import main.monsterkurve.drache.DrachenKurve;
+import main.monsterkurve.pfeilspitze.Pfeilspitze;
+import main.monsterkurve.schneeflocke.Schneeflocke;
+import main.generate.PerformanceResult;
 import main.math.graph.Point;
 import main.schildkroete.Schildkroete;
 

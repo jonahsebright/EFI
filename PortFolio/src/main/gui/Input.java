@@ -5,11 +5,11 @@ import flanagan.io.Db;
 import javax.swing.*;
 
 public class Input {
-    public static int getFractalSelection(String[] fractals){
-        int selection = Db.optionBox("Which Fractals would you like to see?", fractals, fractals, 1);
+    public static int getMonsterkurveSelection(String[] monsterkurvenNames){
+        int selection = Db.optionBox("Welche Monsterkurve möchten Sie sehen?", monsterkurvenNames, monsterkurvenNames, 1);
         if (selection == 0) {
             checkQuit();
-            return getFractalSelection(fractals);
+            return getMonsterkurveSelection(monsterkurvenNames);
         }
         return selection;
     }
@@ -20,7 +20,7 @@ public class Input {
         System.out.println("depth = " + depth);
         if (depth < 0) {
             JOptionPane.showMessageDialog(null, "Die eingebene Stufe war negativ!",
-                    "Error", JOptionPane.ERROR_MESSAGE);
+                    "Fehler", JOptionPane.ERROR_MESSAGE);
             return readDepth(option, defaultDepth);
         }
         return depth;
@@ -31,23 +31,23 @@ public class Input {
     }
 
     private static boolean quit() {
-        return Db.yesNo("Would you like to quit?");
+        return Db.yesNo("Möchten Sie das Pogramm beenden?");
     }
 
     public static boolean askSave() {
-        return Db.yesNo("Would you like to save the image as a .png file?");
+        return Db.yesNo("Möchten Sie das Bild als ein PNG-Datei speichern?");
     }
 
-    public static String readFilename(String fractalName, int depth) {
-        String filename = Db.readLine("Filename", fractalName + "_depth_" + depth);
+    public static String readFilename(String kurvenName, int depth) {
+        String filename = Db.readLine("Dateiname", kurvenName + "_Stufe_" + depth);
         filename = filename.trim();
         if (filename.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Filename cannot be empty!", "Error", JOptionPane.ERROR_MESSAGE);
-            return readFilename(fractalName, depth);
+            JOptionPane.showMessageDialog(null, "Dateiname darf nicht leer sein!", "Fehler", JOptionPane.ERROR_MESSAGE);
+            return readFilename(kurvenName, depth);
         } else return filename;
     }
 
     public static boolean _continue() {
-        return Db.yesNo("Would you like to continue?");
+        return Db.yesNo("Möchten Sie fortfahren?");
     }
 }

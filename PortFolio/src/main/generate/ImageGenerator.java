@@ -1,8 +1,8 @@
-package main;
+package main.generate;
 
-import main.fractal.Monsterkurve;
-import main.fractal.PerformanceResult;
-import main.fractal.drache.DrachenKurve;
+import main.monsterkurve.Monsterkurve;
+import main.monsterkurve.drache.DrachenKurve;
+import main.util.Pair;
 
 import java.util.ArrayList;
 import java.util.Arrays;

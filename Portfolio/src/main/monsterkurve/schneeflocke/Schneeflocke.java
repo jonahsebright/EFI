@@ -1,7 +1,7 @@
-package main.fractal.schneeflocke;
+package main.monsterkurve.schneeflocke;
 
 import flanagan.io.Db;
-import main.fractal.Monsterkurve;
+import main.monsterkurve.Monsterkurve;
 import main.math.graph.Point;
 
 public class Schneeflocke extends Monsterkurve {

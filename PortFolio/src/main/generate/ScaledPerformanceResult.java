@@ -1,8 +1,9 @@
-package main;
+package main.generate;
+
+import main.util.Pair;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class ScaledPerformanceResult {
     private List<Pair<Integer, List<Long>>> depthsAndDurations = new ArrayList<>();

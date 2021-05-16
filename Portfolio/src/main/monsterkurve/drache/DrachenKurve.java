@@ -1,6 +1,6 @@
-package main.fractal.drache;
+package main.monsterkurve.drache;
 
-import main.fractal.Monsterkurve;
+import main.monsterkurve.Monsterkurve;
 import main.math.graph.Point;
 
 public class DrachenKurve extends Monsterkurve {

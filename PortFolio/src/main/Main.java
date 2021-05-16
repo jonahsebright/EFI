@@ -1,6 +1,6 @@
 package main;
 
-import main.fractal.Monsterkurve;
+import main.monsterkurve.Monsterkurve;
 import main.gui.Input;
 
 import javax.swing.*;
@@ -8,7 +8,7 @@ import javax.swing.*;
 public class Main {
 
     public static void main(String[] args) {
-        int fractalSelection = Input.getFractalSelection(Monsterkurve.NAMES);
+        int fractalSelection = Input.getMonsterkurveSelection(Monsterkurve.NAMES);
         String fractalName = Monsterkurve.NAMES[fractalSelection - 1];
         System.out.println("fractal = " + fractalName);
 
