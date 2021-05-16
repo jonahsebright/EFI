@@ -17,7 +17,7 @@ public class Schneeflocke extends Fractal {
         int level = 7;
         Schneeflocke schneeflocke = new Schneeflocke();
         long timeStart = System.currentTimeMillis();
-        schneeflocke.schneeflocke(level, 0.8);
+        schneeflocke.schneeflockeTriangle(level, 0.8);
 
         long timeEnd = System.currentTimeMillis();
         long duration = timeEnd - timeStart;
@@ -40,10 +40,10 @@ public class Schneeflocke extends Fractal {
 
     @Override
     public void drawAbstr(int depth) {
-        schneeflocke(depth, 0.8);
+        schneeflockeTriangle(depth, 0.8);
     }
 
-    public void schneeflocke(int depth, double sideLength) {
+    public void schneeflockeTriangle(int depth, double sideLength) {
         System.out.println("Drawing schneeflocke...");
         if (depth > 4) schildkroete.setPenRadius(0.001);
         if (depth > 7) schildkroete.setPenRadius(0.0005);
@@ -56,20 +56,20 @@ public class Schneeflocke extends Fractal {
         System.out.println("Finished drawing schneeflocke");
     }
 
-    private void schneeflockeRecursive(int level, double sideLength) {
-        if (level == 0) {
+    public void schneeflockeRecursive(int depth, double sideLength) {
+        if (depth == 0) {
             schildkroete.move(sideLength);
             incrementMoveCount();
-            return;
+        } else {
+            depth--;
+            double dividedSideLength = sideLength / LENGTH_DIVIDER;
+            schneeflockeRecursive(depth, dividedSideLength);
+            schildkroete.direction(60);
+            schneeflockeRecursive(depth, dividedSideLength);
+            schildkroete.direction(-120);
+            schneeflockeRecursive(depth, dividedSideLength);
+            schildkroete.direction(60);
+            schneeflockeRecursive(depth, dividedSideLength);
         }
-        level--;
-        double dividedSideLength = sideLength / LENGTH_DIVIDER;
-        schneeflockeRecursive(level, dividedSideLength);
-        schildkroete.direction(60);
-        schneeflockeRecursive(level, dividedSideLength);
-        schildkroete.direction(-120);
-        schneeflockeRecursive(level, dividedSideLength);
-        schildkroete.direction(60);
-        schneeflockeRecursive(level, dividedSideLength);
     }
 }

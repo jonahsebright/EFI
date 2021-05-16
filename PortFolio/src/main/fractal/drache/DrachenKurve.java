@@ -36,16 +36,16 @@ public class DrachenKurve extends Fractal {
         if (level == 0) {
             schildkroete.move(length);
             incrementMoveCount();
-            return;
+        }else {
+            int degreeLeft = direction ? -45 : 45;
+            int degreeRight = direction ? 90 : -90;
+            length /= SQRT_2;
+            level--;
+            schildkroete.direction(degreeLeft);
+            drache(level, length, false);
+            schildkroete.direction(degreeRight);
+            drache(level, length, true);
+            schildkroete.direction(degreeLeft);
         }
-        int degreeLeft = direction ? -45 : 45;
-        int degreeRight = direction ? 90 : -90;
-        length /= SQRT_2;
-        level--;
-        schildkroete.direction(degreeLeft);
-        drache(level, length, false);
-        schildkroete.direction(degreeRight);
-        drache(level, length, true);
-        schildkroete.direction(degreeLeft);
     }
 }

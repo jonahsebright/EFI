@@ -15,9 +15,9 @@ public class ImageGenerator {
 
     public static void main(String[] args) {
        // ScaledPerformanceResult scaledPerformanceResult = generateImages(new Schneeflocke(), "Schneeflocke", 3, until(7, 8, 1));//1, 3, 7);
-        ScaledPerformanceResult scaledPerformanceResult = generateImages(new Pfeilspitze(), "Pfeilspitze",6,  until(6, 8, 1));//1, 4, 9);
-        //generateImages(new DrachenKurve(), "DrachenKurve", 5, until(0, 8, 2));//1, 5, 14);
-        System.out.println("scaledPerformanceResult Pfeilspitze= " + scaledPerformanceResult);
+        //ScaledPerformanceResult scaledPerformanceResult = generateImages(new Pfeilspitze(), "Pfeilspitze",6,  until(6, 8, 1));//1, 4, 9);
+        ScaledPerformanceResult scaledPerformanceResult = generateImages(new DrachenKurve(), "DrachenKurve", 6, until(12, 14, 2));//1, 5, 14);
+        System.out.println("scaledPerformanceResult DrachenKurve= " + scaledPerformanceResult);
     }
 
     private static int[] until(int start, int until, int d) {

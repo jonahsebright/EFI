@@ -42,17 +42,17 @@ public class Pfeilspitze extends Fractal {
         if (level == 0) {
             schildkroete.move(length);
             incrementMoveCount();
-            return;
+        } else {
+            length /= 2;
+            level--;
+            int degree = direction ? 60 : -60;
+            schildkroete.direction(degree);
+            pfeilspitze(level, length, !direction);
+            schildkroete.direction(-degree);
+            pfeilspitze(level, length, direction);
+            schildkroete.direction(-degree);
+            pfeilspitze(level, length, !direction);
+            schildkroete.direction(degree);
         }
-        length /= 2;
-        level--;
-        int degree = direction ? 60 : -60;
-        schildkroete.direction(degree);
-        pfeilspitze(level, length, !direction);
-        schildkroete.direction(-degree);
-        pfeilspitze(level, length, direction);
-        schildkroete.direction(-degree);
-        pfeilspitze(level, length, !direction);
-        schildkroete.direction(degree);
     }
 }
