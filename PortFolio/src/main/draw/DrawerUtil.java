@@ -24,4 +24,15 @@ public class DrawerUtil {
     public static double getSideLengthOfPolygon(double radiusToCorners, int numCorners) {
         return 2 * radiusToCorners * Math.sin(Math.PI / numCorners);
     }
+
+    public static void drawRectangleFromBottomLeft(Schildkroete schildkroete, double height, double width) {
+        schildkroete.setDirection(0);
+        schildkroete.move(width);
+        schildkroete.direction(90);
+        schildkroete.move(height);
+        schildkroete.direction(90);
+        schildkroete.move(width);
+        schildkroete.direction(90);
+        schildkroete.move(height);
+    }
 }

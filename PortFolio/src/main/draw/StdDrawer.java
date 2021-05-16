@@ -2,6 +2,8 @@ package main.draw;
 
 import main.math.graph.Point;
 
+import java.awt.*;
+
 public class StdDrawer implements Drawer {
     @Override
     public void drawLine(Point from, Point to){
@@ -11,6 +13,11 @@ public class StdDrawer implements Drawer {
     @Override
     public void setPenRadius(double radius) {
         StdDrawAdapter.setPenRadius(radius);
+    }
+
+    @Override
+    public void setPenColor(Color color) {
+        StdDrawAdapter.setPenColor(color);
     }
 
     @Override

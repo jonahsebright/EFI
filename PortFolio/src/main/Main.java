@@ -8,8 +8,8 @@ import javax.swing.*;
 public class Main {
 
     public static void main(String[] args) {
-        int fractalSelection = Input.getMonsterkurveSelection(Monsterkurve.NAMES);
-        String fractalName = Monsterkurve.NAMES[fractalSelection - 1];
+        int kurvenSelection = Input.getMonsterkurveSelection(Monsterkurve.NAMES);
+        String fractalName = Monsterkurve.NAMES[kurvenSelection - 1];
         System.out.println("fractal = " + fractalName);
 
         Monsterkurve monsterkurve = Monsterkurve.getFractalFromName(fractalName);
@@ -18,9 +18,8 @@ public class Main {
         monsterkurve.draw(depth);
 
         boolean save = Input.askSave();
-        if (save){
-            attemptSaveImage(fractalName, monsterkurve, depth);
-        };
+
+        if (save) attemptSaveImage(fractalName, monsterkurve, depth);
 
         if (Input._continue()) {
             monsterkurve.clear();

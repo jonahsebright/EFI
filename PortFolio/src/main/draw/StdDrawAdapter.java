@@ -26,6 +26,7 @@ class StdDrawAdapter {
         try {
             stdDraw = Class.forName("StdDraw");
             setPenColor = stdDraw.getMethod("setPenColor", Color.class);
+            setPenColor = stdDraw.getMethod("setPenColor", Color.class);
             setPenColor(Color.BLACK);
             line = stdDraw.getMethod("line", double.class, double.class, double.class, double.class);
             setPenRadius = stdDraw.getMethod("setPenRadius", double.class);

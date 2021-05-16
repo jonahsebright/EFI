@@ -65,9 +65,10 @@ public class Schildkroete {
     }
 
     public void move(double distance) {
-        Point original = currentPos.getLocation();
         double dx = Math.sin(Math.toRadians(-direction + 90)) * distance;
         double dy = Math.cos(Math.toRadians(-direction + 90)) * distance;
+
+        Point original = currentPos.getLocation();
         currentPos.translate(dx, dy);
         drawer.drawLine(original, currentPos);
     }
