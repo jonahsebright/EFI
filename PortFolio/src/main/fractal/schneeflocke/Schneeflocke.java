@@ -1,10 +1,10 @@
 package main.fractal.schneeflocke;
 
 import flanagan.io.Db;
-import main.fractal.Fractal;
+import main.fractal.Monsterkurve;
 import main.math.graph.Point;
 
-public class Schneeflocke extends Fractal {
+public class Schneeflocke extends Monsterkurve {
 
     private final static int LENGTH_DIVIDER = 3;
 

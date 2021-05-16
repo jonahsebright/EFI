@@ -1,10 +1,8 @@
 package main;
 
-import main.fractal.Fractal;
+import main.fractal.Monsterkurve;
 import main.fractal.PerformanceResult;
 import main.fractal.drache.DrachenKurve;
-import main.fractal.pfeilspitze.Pfeilspitze;
-import main.fractal.schneeflocke.Schneeflocke;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,19 +28,19 @@ public class ImageGenerator {
         return result;
     }
 
-    private static ScaledPerformanceResult generateImages(Fractal fractal, String name, int times, int... depths) {
+    private static ScaledPerformanceResult generateImages(Monsterkurve monsterkurve, String name, int times, int... depths) {
         System.out.println("ImageGenerator.generateImages");
         ScaledPerformanceResult result = new ScaledPerformanceResult();
-        System.out.println("fractal = " + fractal + ", name = " + name + ", depths = " + Arrays.toString(depths));
+        System.out.println("fractal = " + monsterkurve + ", name = " + name + ", depths = " + Arrays.toString(depths));
         for (int depth : depths) {
             System.out.println("depth = " + depth);
             List<Long> durations = new ArrayList<>();
             for (int i = 0; i < times; i++) {
-                PerformanceResult performanceResult = fractal.draw(depth);
+                PerformanceResult performanceResult = monsterkurve.draw(depth);
                 durations.add(performanceResult.getDurationMillis());
                 System.out.println("performanceResult = " + performanceResult);
-                fractal.savePng(TAG + "_" + name + "_" + depth);
-                fractal.clear();
+                monsterkurve.savePng(TAG + "_" + name + "_" + depth);
+                monsterkurve.clear();
             }
             result.addSmallResult(new Pair<>(depth, durations));
         }

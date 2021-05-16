@@ -1,10 +1,10 @@
 package main.fractal.pfeilspitze;
 
 import main.draw.Drawer;
-import main.fractal.Fractal;
+import main.fractal.Monsterkurve;
 import main.math.graph.Point;
 
-public class Pfeilspitze extends Fractal {
+public class Pfeilspitze extends Monsterkurve {
 
     @Override
     protected Point getStartingPoint() {

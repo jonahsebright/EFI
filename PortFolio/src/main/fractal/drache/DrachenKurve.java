@@ -1,9 +1,9 @@
 package main.fractal.drache;
 
-import main.fractal.Fractal;
+import main.fractal.Monsterkurve;
 import main.math.graph.Point;
 
-public class DrachenKurve extends Fractal {
+public class DrachenKurve extends Monsterkurve {
 
     public static double SQRT_2 = Math.sqrt(2);
 

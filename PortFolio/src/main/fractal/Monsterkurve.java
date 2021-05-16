@@ -7,14 +7,14 @@ import main.fractal.schneeflocke.Schneeflocke;
 import main.math.graph.Point;
 import main.schildkroete.Schildkroete;
 
-public abstract class Fractal {
+public abstract class Monsterkurve {
     public static final String PFEIL_SPITZE = "Pfeilspitze";
     public static final String DRACHEN_KURVE = "Drachenkurve";
     public static final String SCHNEE_FLOCKE = "Schneeflocke";
 
     public static final String[] NAMES = {SCHNEE_FLOCKE, DRACHEN_KURVE, PFEIL_SPITZE};
 
-    public static Fractal getFractalFromName(String name) {
+    public static Monsterkurve getFractalFromName(String name) {
         return switch (name) {
             case SCHNEE_FLOCKE -> new Schneeflocke();
             case DRACHEN_KURVE -> new DrachenKurve();
